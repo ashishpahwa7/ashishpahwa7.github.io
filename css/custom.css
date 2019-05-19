@@ -1,2 +1,37 @@
 /* your styles go here */
 button.btn-css {border-radius: 50px;padding:7px 20px; margin:10px;}
+.dialogflow-chat-wrap{
+	display: none;
+	position: fixed;
+	bottom: 90px;
+	right: 20px;
+}
+.dialogflow{
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 10;
+}
+.dialogflow-chat-wrap.animated{
+	webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+}
+.dialogflow-button{
+	cursor: pointer;
+}
+
+@media (min-width: 300px) and (max-width: 480px) {
+ .dialogflow-chat-wrap{
+ 	right: 10px;
+ 	bottom: 80px;
+ }
+ .dialogflow{
+ 	right: 10px;
+ 	bottom: 10px;
+ }
+ iframe{
+ 	width: 100%;
+ 	z-index: 1;
+ 	height: 400px;
+ }
+}

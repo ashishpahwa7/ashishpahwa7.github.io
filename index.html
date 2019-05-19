@@ -578,25 +578,32 @@
     <script src="js/front.js"></script>
 
 <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/5cdf8ac82846b90c57af236b/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
+<!-- <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/5cdf8ac82846b90c57af236b/default';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+</script> -->
 <!--End of Tawk.to Script-->
 			  
-<iframe
-    allow="microphone;"
-    width="350"
-    height="430"
-    src="https://console.dialogflow.com/api-client/demo/embedded/4756d3bc-276b-4811-b4e1-64e05c4a05ee">
-</iframe>
+    <div class="dialogflow">
+      <div class="dialogflow-chat-wrap animated zoomIn">
+        <iframe
+          allow="microphone;"
+          width="350"
+          height="430"
+          src="https://console.dialogflow.com/api-client/demo/embedded/4756d3bc-276b-4811-b4e1-64e05c4a05ee">
+        </iframe>
+      </div>
+      <div class="dialogflow-button">
+        <img src="img/Group 1.png">
+      </div>
+    </div>
   </body>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -609,3 +616,16 @@ s0.parentNode.insertBefore(s1,s0);
   gtag('config', 'UA-100109057-2');
 </script>
 </html>
+<script>
+  $('.dialogflow-button').click(function(){
+    if ($('.dialogflow-chat-wrap').css('display') === 'none') {
+      $('.dialogflow-chat-wrap').show()
+    }else{
+      $('.dialogflow-chat-wrap').addClass('zoomOut')
+      setTimeout(function(){
+        $('.dialogflow-chat-wrap').hide()
+        $('.dialogflow-chat-wrap').removeClass('zoomOut')
+      }, 700)
+    }
+  })
+</script>
